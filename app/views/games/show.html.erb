@@ -1,0 +1,32 @@
+  <div class="row">
+    <div class="col-sm">
+      <h2>回答</h2>
+      <div class="container">
+        <table class="table" id="answers">
+          <tr>
+            <th></th><th>回答</th><th>場所・数字一致</th><th>数字のみ一致</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-sm">
+      <h2>入力</h2>
+      <div class="container">
+        <%= form_with url: check_path(id: @game.id), method: "get", remote: true do |f| %>
+          <div class="form-group">
+            <%= f.text_field :number, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.submit "回答", class: "btn btn-primary" %>
+          </div>
+
+          <div class="form-group">
+            <p>メモ</p>
+            <textarea class="form-control" rows="10"></textarea>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+

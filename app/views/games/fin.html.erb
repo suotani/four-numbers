@@ -1,0 +1,5 @@
+<div class="jumbotron">
+  <h1 class="display-4"><%= @answer.clear ? "成功" : "失敗" %></h1>
+  <p class="lead">掛け金<%= @answer.game.bet %>を<%= @answer.clear ? "受け取りました" : "失いました" %></p>
+  <%= link_to "問題一覧へ戻る", games_path, class: "btn btn-primary btn-lg" %>
+</div>
