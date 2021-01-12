@@ -5,8 +5,8 @@
 <div class="progress">
   <% win_rate = (@user.lose_count + @user.win_count) == 0 ? 0 : (@user.win_count.to_f / (@user.lose_count + @user.win_count) * 100).floor(1) %>
   <% lose_rate = (@user.lose_count + @user.win_count) == 0 ? 0 : (@user.lose_count.to_f / (@user.lose_count + @user.win_count) * 100).floor(1) %>
-  <div class="progress-bar" role="progressbar" style="width: #{win_rate}%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-success" role="progressbar" style="width: #{lose_rate}%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar" role="progressbar" style="width: <%= win_rate %>%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width: <%= lose_rate %>%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
 <div class="container">
