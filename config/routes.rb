@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get "check/:id", to: "games#check", as: "check"
   get "fin/:id", to: "games#fin", as: "fin"
   resources :users, only: [:index, :show]
+  resources :chats, only: [:index, :show]
 end

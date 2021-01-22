@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_05_155035) do
+ActiveRecord::Schema.define(version: 2021_01_22_022012) do
 
   create_table "answers", force: :cascade do |t|
     t.integer "game_id"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 2021_01_05_155035) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "chats", force: :cascade do |t|
+    t.string "message"
+    t.integer "room_id"
+    t.string "speaker"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "games", force: :cascade do |t|
     t.string "title", default: "無題", null: false
     t.integer "limit"
@@ -29,6 +37,12 @@ ActiveRecord::Schema.define(version: 2021_01_05_155035) do
     t.integer "status", default: 1, null: false
     t.integer "bet", default: 0, null: false
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
