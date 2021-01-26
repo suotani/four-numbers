@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: "games#index"
+  #root to: "games#index"
 
   devise_for :users, controllers: {
     registrations: 'users/registrations',
@@ -14,4 +14,9 @@ Rails.application.routes.draw do
   get "fin/:id", to: "games#fin", as: "fin"
   resources :users, only: [:index, :show]
   resources :chats, only: [:index, :show]
+
+  get "/teacher", to: "white_boards#teacher"
+  get "/student", to: "white_boards#student"
+
+  resources :tweets, only: [:index, :create]
 end

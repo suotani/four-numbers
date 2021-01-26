@@ -1,0 +1,8 @@
+<% if @result %>
+
+  $("table").append("<tr><td><%= @tweet.memo %></td></tr>")
+  $("#memo").val("")
+  $(".alert").html("")
+<% else %>
+  $(".alert").html("登録に失敗しました")
+<% end %>
