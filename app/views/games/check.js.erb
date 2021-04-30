@@ -1,9 +1,0 @@
-<% if @answer.fin %>
-  window.location.replace("<%= fin_path(id: @answer.id) %>");
-<% else %>
-  $("#answers").append(
-    "<tr><td><%= @count %></td><td><%= @number %></td><td><%= @match_count %></td><td><%= @include_count %></td></tr>"
-  );
-
-  $("#number").val("");
-<% end %>
