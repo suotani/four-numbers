@@ -1,0 +1,13 @@
+<%= javascript_include_tag 'cable' %>
+<%= javascript_include_tag 'channels/chat' %>
+<h1>Chat room</h1>
+
+<div id="messages">
+  <%= render @chats %>
+</div>
+
+  <div class="form-group">
+    <input type="hidden" value="<%= @room_id %>" id="id" >
+    <label>Say something:</label>
+    <input type="text" data-behavior="chat_speaker" class="form-control">
+  </div>

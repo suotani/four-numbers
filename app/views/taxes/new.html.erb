@@ -1,0 +1,5 @@
+<%= form_with model: @tax, local: true do |f| %>
+  <%= f.number_field :rate %>
+  <%= f.text_field :name %>
+  <%= f.submit "登録" %>
+<% end %>
